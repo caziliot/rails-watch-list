@@ -1,0 +1,9 @@
+<% @lists.each do |list| %>
+  <div class="card-product">
+    <img src=<%=list.image_url%> />
+    <div class="card-product-infos">
+      <h2><strong><%= list.name %></strong></h2>
+      <%= link_to "See this list", list_path(list), class:"btn btn-flat" %>
+    </div>
+  </div>
+<% end %>
