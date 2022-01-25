@@ -8,6 +8,7 @@
     <% @list.bookmarks.each do |bookmark| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= bookmark.movie.poster_url%>)">
         <h2><%= bookmark.movie.title %></h2>
+        <p> <%= bookmark.comment %></p>
       </div>
     <% end %>
   </div>
