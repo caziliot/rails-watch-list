@@ -1,7 +1,8 @@
 <div class="banner">
   <%= simple_form_for(@list) do |f| %>
     <%= f.input :name %>
-    <%= f.input :image_url, input_html: {value: ""}, required: true %>
+    <%# <%= f.input :image_url, input_html: {value: ""}, required: true %> %>
+    <%= f.input :photo, as: :file %>
     <%= f.submit "Submit", class: 'btn btn-primary'%>
   <% end %>
 </div>

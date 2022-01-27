@@ -1,6 +1,10 @@
 <% @lists.each do |list| %>
   <div class="card-product">
-    <img src=<%=list.image_url%> />
+    <% if list.photo.attached?%>
+      <%= cl_image_tag @article.photo.key, height: 120, width: 120, crop: :fill %>
+    <% else%>
+      <img src=<%=list.image_url%> />
+    <% end%>
     <div class="card-product-infos">
       <h2><strong><%= list.name %></strong></h2>
       <%= link_to "See this list", list_path(list), class:"btn btn-flat" %>
